@@ -4,7 +4,7 @@
 
         const convo = new BotkitConversation( 'flag_colors', controller );
 
-        convo.ask( 'Can you name one of the colors on the flag of the United States of America..?', [
+        convo.ask( 'Can you name one of the colors on the flag of the United States of America..?', [ //function declares an array instead of a single regular expression.
             {
                 pattern: '^red|white|blue$',
                 handler: async (response, convo, bot) => {
