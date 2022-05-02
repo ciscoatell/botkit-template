@@ -165,7 +165,22 @@ if (public_url) {
 
     console.log('Health check available at: ' + public_url);
 }
+var Framework = require('webex-node-bot-framework'); 
+var webhook = require('webex-node-bot-framework/webhook');
 
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+app.use(bodyParser.json());
+var framework = new Framework(config);
+framework.start();
+
+app.post('/framework', webhook(framework));
+
+// start express server
+var server = app.listen(config.port, function () {
+  framework.debug('Framework listening on port %s', config.port);
+});
 controller.commandHelp = [];
 
 controller.checkAddMention = function (roomType, command) {

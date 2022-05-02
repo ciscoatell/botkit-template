@@ -106,3 +106,10 @@ You can verify the bot is up and running by browsing to its healthcheck URL (i.e
 You bot is all set!  You can invite it to 1-1 and 'group' spaces, see it sending a welcome message when added, and responding to commands (try `help`.)
 
 You can always verify the bot is operational by browsing to its healthcheck URL (i.e. the app domain.)
+
+
+git remote add heroku git.heroku.com/webex-foodbot.git
+
+https://git.heroku.com/webex-foodbot.git
+
+ git remote add staging https://git.heroku.com/webex-foodbot.git
